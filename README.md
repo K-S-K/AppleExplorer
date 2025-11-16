@@ -28,3 +28,12 @@ The installer package can be found in the `./publish` directory after building t
 
 ## License
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+
+
+
+
+
+dotnet publish -c Release -f net10.0-maccatalyst -o ./publish /p:EnableWindowsTargeting=false
+
+dotnet build -c Debug -f net10.0-windows10.0.22621.0
