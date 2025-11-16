@@ -1,4 +1,6 @@
-﻿namespace AppleExplorer.Desktop
+﻿using AppleExplorer.Desktop.ViewModeles;
+
+namespace AppleExplorer.Desktop
 {
     public partial class MainPage : ContentPage
     {
@@ -7,6 +9,7 @@
         public MainPage()
         {
             InitializeComponent();
+            BindingContext = new MainPageViewModel();
         }
 
         private void OnCounterClicked(object? sender, EventArgs e)
