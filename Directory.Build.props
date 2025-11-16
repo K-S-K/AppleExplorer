@@ -1,0 +1,12 @@
+<Project>
+	<PropertyGroup>
+		<!-- Debug defaults -->
+		<DebugSymbols Condition="'$(Configuration)' == 'Debug' and '$(DebugSymbols)' == ''">true</DebugSymbols>
+		<DebugType Condition="'$(Configuration)' == 'Debug' and '$(DebugType)' == ''">portable</DebugType>
+		<Optimize Condition="'$(Configuration)' == 'Debug' and '$(Optimize)' == ''">false</Optimize>
+
+		<!-- Safe pattern to append a repo-level before-targets file if it exists -->
+		<_MyCustomBeforeTargets>$(MSBuildThisFileDirectory)build\my.targets</_MyCustomBeforeTargets>
+		<CustomBeforeMicrosoftCommonTargets Condition="Exists('$(_MyCustomBeforeTargets)')">$(CustomBeforeMicrosoftCommonTargets);$(_MyCustomBeforeTargets)</CustomBeforeMicrosoftCommonTargets>
+	</PropertyGroup>
+</Project>

@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="AppleExplorer.Desktop/AppleExplorer.Desktop.csproj">
+    <Deploy />
+  </Project>
+</Solution>
